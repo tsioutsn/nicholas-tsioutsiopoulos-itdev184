@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-0D-om7">
+                                <rect key="frame" x="140" y="445" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Cy-gC-igG"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAt-AK-f5E">
+                                <rect key="frame" x="140" y="351" width="94" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="zr0-G9-B9h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGX-42-Ppp">
+                                <rect key="frame" x="164" y="217" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeStepper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qL-sH-xah"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yGX-42-Ppp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="HJL-sH-04X"/>
+                            <constraint firstItem="yGX-42-Ppp" firstAttribute="centerX" secondItem="PAt-AK-f5E" secondAttribute="centerX" id="PNv-mm-Xgv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jQ5-0D-om7" secondAttribute="bottom" constant="193" id="XAI-56-JLh"/>
+                            <constraint firstItem="PAt-AK-f5E" firstAttribute="trailing" secondItem="jQ5-0D-om7" secondAttribute="trailing" id="dde-wV-eGU"/>
+                            <constraint firstItem="yGX-42-Ppp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e81-rW-jPO"/>
+                            <constraint firstItem="jQ5-0D-om7" firstAttribute="top" secondItem="PAt-AK-f5E" secondAttribute="bottom" constant="53" id="eUz-FN-4NC"/>
+                            <constraint firstItem="PAt-AK-f5E" firstAttribute="leading" secondItem="jQ5-0D-om7" secondAttribute="leading" id="mrN-WV-wdu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelValue" destination="PAt-AK-f5E" id="Uam-xn-Cl3"/>
+                        <outlet property="stepperValue" destination="jQ5-0D-om7" id="dPX-Po-ybI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>

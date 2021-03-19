@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f5-ck-BiM">
+                                <rect key="frame" x="164" y="199" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4d-St-Qcw"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hV1-Os-feW">
+                                <rect key="frame" x="177" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RUo-u0-R2N">
+                                <rect key="frame" x="112" y="492" width="150" height="2"/>
+                            </progressView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-I3-E9A">
+                                <rect key="frame" x="140" y="552" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1XG-1l-xC7"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-iV-t0X">
+                                <rect key="frame" x="91" y="381" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0f5-ck-BiM" firstAttribute="centerX" secondItem="hV1-Os-feW" secondAttribute="centerX" id="1Ty-ql-lpS"/>
+                            <constraint firstItem="VAO-iV-t0X" firstAttribute="top" secondItem="hV1-Os-feW" secondAttribute="bottom" constant="71" id="AEK-gW-LQu"/>
+                            <constraint firstItem="RUo-u0-R2N" firstAttribute="top" secondItem="VAO-iV-t0X" secondAttribute="bottom" constant="90" id="CMy-GD-Fp1"/>
+                            <constraint firstItem="hV1-Os-feW" firstAttribute="top" secondItem="0f5-ck-BiM" secondAttribute="bottom" constant="61" id="HN2-IE-fIt"/>
+                            <constraint firstItem="VAO-iV-t0X" firstAttribute="centerX" secondItem="RUo-u0-R2N" secondAttribute="centerX" id="IG7-In-g6G"/>
+                            <constraint firstItem="0f5-ck-BiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="179" id="OMh-nY-cun"/>
+                            <constraint firstItem="tOb-I3-E9A" firstAttribute="top" secondItem="RUo-u0-R2N" secondAttribute="bottom" constant="58" id="VpS-cW-TO8"/>
+                            <constraint firstItem="0f5-ck-BiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncP-OP-QrV"/>
+                            <constraint firstItem="RUo-u0-R2N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="sEe-gh-2E9"/>
+                            <constraint firstItem="VAO-iV-t0X" firstAttribute="centerX" secondItem="hV1-Os-feW" secondAttribute="centerX" id="uJA-c7-hKp"/>
+                            <constraint firstItem="RUo-u0-R2N" firstAttribute="centerX" secondItem="tOb-I3-E9A" secondAttribute="centerX" id="yge-MO-8Fz"/>
+                            <constraint firstItem="VAO-iV-t0X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="ykC-aZ-1sL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="hV1-Os-feW" id="I6B-fA-6UY"/>
+                        <outlet property="labelProgress" destination="VAO-iV-t0X" id="U3P-sm-PEC"/>
+                        <outlet property="progressView" destination="RUo-u0-R2N" id="A5T-GB-aMd"/>
+                        <outlet property="stepperObject" destination="tOb-I3-E9A" id="QRD-Ci-i1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
